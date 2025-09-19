@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Traffic Insights for Indian Cities</title>
     <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="chatbot.css">
 </head>
+
 <body>
     <div class="container">
         <aside class="sidebar">
@@ -23,7 +26,7 @@
                 <h3>When do you plan to travel?</h3>
                 <label for="travel-date">Date:</label>
                 <input type="date" id="travel-date" name="date" value="2025-09-19">
-                
+
                 <label for="travel-time">Time:</label>
                 <input type="time" id="travel-time" name="time" value="09:00">
 
@@ -61,12 +64,28 @@
                         <p>Routes predicted to have the longest average travel times.</p>
                         <table class="data-table">
                             <thead>
-                                <tr><th>Route Name</th><th>Avg. Time</th><th>Status</th></tr>
+                                <tr>
+                                    <th>Route Name</th>
+                                    <th>Avg. Time</th>
+                                    <th>Status</th>
+                                </tr>
                             </thead>
                             <tbody>
-                                <tr><td>AB Road Corridor</td><td>45 min</td><td class="status-high">High</td></tr>
-                                <tr><td>Palasia-VN</td><td>32 min</td><td class="status-mod">Moderate</td></tr>
-                                <tr><td>Airport Road</td><td>18 min</td><td class="status-low">Low</td></tr>
+                                <tr>
+                                    <td>AB Road Corridor</td>
+                                    <td>45 min</td>
+                                    <td class="status-high">High</td>
+                                </tr>
+                                <tr>
+                                    <td>Palasia-VN</td>
+                                    <td>32 min</td>
+                                    <td class="status-mod">Moderate</td>
+                                </tr>
+                                <tr>
+                                    <td>Airport Road</td>
+                                    <td>18 min</td>
+                                    <td class="status-low">Low</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -74,5 +93,26 @@
             </section>
         </main>
     </div>
+    <!-- Chatbot Toggle Button -->
+    <div id="chat-toggle"><i class="fa-solid fa-comment"></i></div>
+
+    <!-- Chatbot Box -->
+    <div id="chatbox">
+        <div class="chat-header">
+            <span>ChatBot</span>
+            <span id="chat-close"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+
+        <div class="chat-body">
+            <div class="msg bot">Hello 👋 How can I help you?</div>
+        </div>
+
+        <div class="chat-footer">
+            <input type="text" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="gemini.js"></script>
 </body>
+
 </html>
