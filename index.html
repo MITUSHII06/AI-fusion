@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Traffic Insights for Indian Cities</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Get Instant Route Insight 🚀</h2>
+            <p>For Citizens & Delivery Services</p>
+            <form id="prediction-form">
+                <label for="route-select">1. Select your Route:</label>
+                <select id="route-select" name="route">
+                    <option value="101">Route-A: Palasia Square to Vijay Nagar</option>
+                    <option value="205">Route-B: AB Road Corridor</option>
+                    <option value="302">Route-C: Railway Station to Airport Road</option>
+                    <option value="401">Route-D: Bypass Connector</option>
+                </select>
+
+                <h3>When do you plan to travel?</h3>
+                <label for="travel-date">Date:</label>
+                <input type="date" id="travel-date" name="date" value="2025-09-19">
+                
+                <label for="travel-time">Time:</label>
+                <input type="time" id="travel-time" name="time" value="09:00">
+
+                <button type="submit" class="predict-btn">Predict Travel Time</button>
+            </form>
+            <div class="sidebar-footer">
+                <p>⚠️ **Note:** AI Prediction requires a backend service (e.g., Flask/Streamlit).</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <h1>🚦 Smart Traffic Insights for Indore</h1>
+            <p class="subtitle">An AI-powered system to predict travel time and optimize mobility.</p>
+
+            <section class="prediction-output">
+                <h2>Prediction Result (Travel Time)</h2>
+                <div id="result-box" class="card result-placeholder">
+                    Select your route and time in the sidebar and click 'Predict' to see the result here.
+                </div>
+            </section>
+
+            <section class="city-insights">
+                <h2>📈 City-Wide Strategic Insights (For Officials)</h2>
+                <p class="info-tag">Identify recurring congestion patterns for long-term planning.</p>
+
+                <div class="insights-grid">
+                    <div class="card insight-card">
+                        <h3>1. Weekly Traffic Pattern</h3>
+                        <p>Average travel time vs. Hour of Day to find peak congestion hours.</p>
+                        <div class="chart-placeholder">[Line Chart Placeholder]</div>
+                    </div>
+
+                    <div class="card insight-card">
+                        <h3>2. Top 5 Most Congested Routes</h3>
+                        <p>Routes predicted to have the longest average travel times.</p>
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>Route Name</th><th>Avg. Time</th><th>Status</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>AB Road Corridor</td><td>45 min</td><td class="status-high">High</td></tr>
+                                <tr><td>Palasia-VN</td><td>32 min</td><td class="status-mod">Moderate</td></tr>
+                                <tr><td>Airport Road</td><td>18 min</td><td class="status-low">Low</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
